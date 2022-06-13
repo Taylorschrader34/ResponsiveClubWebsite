@@ -1,0 +1,231 @@
+/* Universal Styles */
+
+html{
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* Navigation */
+nav{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: blue;
+  height: 2.5rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: white
+}
+
+.desktop{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.mobile{
+  display: none;
+}
+
+#MainContent{
+  background-image: url(../images/hypnotize_bg.png);
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: .4rem;
+  }
+}
+
+/* Header */
+
+header {
+  position: relative;
+  top: 25px;
+  height: 20rem;
+  background-image: url(../images/CurlingBackdrop.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+header .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .content h1{
+  color: white;
+  font-size: 5rem;
+}
+
+/* Main Content */
+
+#MainContent{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Events Section */
+
+#Events{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#Events .event{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+}
+
+.event .name{
+  text-align: center;
+  color: black;
+}
+
+.event .location{
+  color: black;
+}
+
+.event .description{
+  border-top: 1px solid black;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.event .learn{
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 15%;
+  margin-top: auto;
+}
+
+.event .imageContainer{
+  display: flex;
+  margin: 5px 5px 0px;
+}
+
+.event .imageContainer img{
+  max-height: 200px;
+  max-width: 200px;
+}
+
+/* About */
+
+#About{
+  display: flex;
+  flex-direction: column;
+}
+
+#About .info{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  gap:10px;
+}
+
+.info h2{
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+ 
+.info p{
+  color: black;
+  font-size: 1rem;
+}
+
+/* Gallery */
+
+#Gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #Gallery{
+    flex-direction: column;
+  }
+
+  #Gallery .imageContainer{
+    width: 100%;
+  }
+
+  #Gallery img{
+    width: 100%;
+  }
+}
+
+/* Donate */
+
+#Donate{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#Donate .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  background-color: lightgreen;
+  color: black;
+  border: 2px solid grey;
+  border-radius: 10px;
+  height: 30px;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  background-color: blue;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+}
